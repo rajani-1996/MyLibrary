@@ -13,15 +13,14 @@ registerRouter.get("/add",function(req,res){
 });
 
 registerRouter.post('/add',function(req,res){
-        
-        
-    // res.send("hi")
+
     var item =
     {
        
        
        email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      cpassword:req.body.cpassword
 
      
     }
