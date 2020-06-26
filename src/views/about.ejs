@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ABOUT</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/gif" sizes="16*16">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anontrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymousymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/boots"></script> 
+</head>
+<body style="font: normal;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/"><h3 style="color: rgb(221, 32, 105);">E-BookReader</h3></a>
+              
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                     <%for(var i=0;i<nav.length;i++){%>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<%=nav[i].link%>" style="color:rgb(221, 32, 105) ;"><%=nav[i].title%></a>
+                                </li>
+                                
+                                  <%}%></ul>
+                              </div>
+                               </nav>
+                </header>  
+                <div class="container" style="text-align: center;">
+                  <div class="contact-details">
+                    <h2><u>Contact Details</u></h2>
+                    <br />
+                    <h4>Website related issues / enquiries</h4> <br />
+                    
+                    <p class="bold"><b>Site Administrator:</b>RAJANI M R</p>
+                    <p class="bold"><b>Email: </b><a href="gmail.com">ebookreader@gmail.com</a></p>
+                    <p class="bold"><b>Telephone: </b><span></span><a href="tel:0191123456789">0191 123456789</a> <br/>
+          
+                    <br />
+          
+                    <h4>Company Address</h4>
+                    <br />
+          
+                    <p class="bold"><b> Address: </b>123 Street</p>
+                    <p class="bold"><b>City: </b> TVM</p>
+                    <p class="bold"><b>Postcode: </b>695501</p>
+                  </div>
+                </div>  
+                          
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Book</title>
+  <link rel="icon" href="images/favicon-32x32.png" type="image/gif" sizes="16*16">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color:rgb(252, 252, 252);">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/"><h3 style="color: rgb(221, 32, 105);">E-BookReader</h3></a>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+               <%for(var i=0;i<nav.length;i++){%>
+                          <li class="nav-item">
+                              <a class="nav-link" href="<%=nav[i].link%>" style="color:rgb(221, 32, 105) ;"><%=nav[i].title%></a>
+                          </li>
+                          
+                            <%}%></ul>
+                        </div>
+                         </nav>
+  </header>
+
+  <div class="container" style="color: rgb(253, 250, 244);background-color: rgb(245, 176, 176);">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" margin:30px;padding: 25px;>
+          <form action="/books/add" method="GET" name="addbook">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Title</label>
+              <input type="input" class="form-control" name="title1" id="title1">
+              <label for="exampleInputPassword1">Author</label>
+              <input type="input" class="form-control" name="author1" id="author1">
+              <label for="exampleInputPassword1">Image</label>
+              <input type="file" class="form-control" name="image" id="image">
+            </div>
+            <center><button type="submit"  style="color: rgb(210, 30, 129);background-color: rgb(245, 245, 245);">Add Book</button></center>
+          </form>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card text-center">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Copyright © 2020.All Rights Reserved</h5>
+      <p class="card-text">Legal Disclaimer - Privacy Statement</p>
+      <a href="#" class="btn btn-primary">more</a>
+    </div>
+    <div class="card-footer text-muted">
+      updated 12 mins ago
+    </div>
+  </div>
+
+  <script>
+    function validate() {
+      var check = mail.valid;
+      var regexp = document.getElementById("exampleInputEmail1").pattern;
+      if (regexp.test(check)) {
+        fb.innerText = "valid";
+        fb.style.color = "green";
+        fb.style.visibility = "visible";
+        return true;
+      }
+      else {
+        fb.innerText = "invalid";
+        fb.style.visibility = "visible";
+        return false;
+      }
+    }
+    function checkPassword(form) {
+      password1 = form.password1.value;
+      if (password1 == " ") {
+        alert("please enter password");
+      }
+      else {
+        alert("login successfull");
+      }
+    }
+  </script>
+  <div class="card w-100">
+    <div class="card text-center">
+        <div class="card-header">
+          E-BookReader
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Copyright © 2020.All Rights Reserved</h5>
+           
+           
+        </div>
+       
+    </div>
+</body>
+
+</html>

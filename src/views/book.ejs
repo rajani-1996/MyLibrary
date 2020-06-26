@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BOOK</title>
+  <link rel="icon" href="images/favicon-32x32.png" type="image/gif" sizes="16*16">
+  <link rel="stylesheet" href="/https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anontrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymousymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/"><h3 style="color: rgb(221, 32, 105);">E-BookReader</h3></a>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+               
+    
+                        <%for(var i=0;i<nav.length;i++){%>
+                          <li class="nav-item">
+                              <a class="nav-link" href="<%=nav[i].link%>" style="color:rgb(221, 32, 105) ;"><%=nav[i].title%></a>
+                          </li>
+                          
+                            <%}%>
+    
+    
+    
+    
+                        </ul>
+                        </div>
+                         </nav>
+  </header>
+  <div  class="container" id="menudiv">
+    <div class="row">
+
+       
+
+      <div class="row">
+        <div class="column">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/<%=book.image%>" height="300" width="300">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%=book.title%> <br>
+                <br> <%=book.author%> </h5>
+              
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <br>
+      
+
+
+      <form action="/books/edit" method="POST">
+        <input type="hidden" name="id" value="<%=book._id%>" />
+        <button type="submit" style="color:green;background-color:white;text-align: center;">Edit</button>
+      </form>
+    
+      <form action="/books/delete" method="POST">
+        <input type="hidden" name="id" value="<%=book._id%>" />
+        <button type="submit" style="color: red;background-color: white;text-align: center;">Delete</button>
+      </form>
+     
+
+
+
+
+
+      <br>
+      <div class="card w-100">
+        <div class="card text-center">
+            <div class="card-header">
+              E-BookReader
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Copyright © 2020.All Rights Reserved</h5>
+               
+               
+            </div>
+           
+        </div>
+
+</body>
+
+</html>
