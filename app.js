@@ -8,7 +8,7 @@ const bodyparser=require('body-parser');
 const authorRouter=require("./src/routes/authorrouter");
 const bookRouter=require("./src/routes/bookRoutes");
 const loginRouter=require("./src/routes/loginrouter");
-const registerRouter=require("./src/routes/registerrouter")
+const registerRouter=require("./src/routes/registerrouter");
 
 app.set('views','./src/views');
 app.set('view engine','ejs');
@@ -16,7 +16,7 @@ app.use(express.static(__dirname + 'public'));
 app.use(express.static(__dirname + '/public/images'));
 app.use(bodyparser.urlencoded({extended:true}));
 
-;
+
 
 app.use("/authors",authorRouter);
 app.use("/login",loginRouter);
