@@ -7,5 +7,5 @@ const newSchema = new Schema({
     image : String
 
 });
-const Bookdata = mongoose.model('bookdata', newSchema);
+const Bookdata = mongoose.model('bookmodel', newSchema);
 module.exports = Bookdata;

@@ -7,5 +7,5 @@ const newSchema = new Schema({
     image: String
 
 });
-const authordata = mongoose.model('authordata', newSchema);
+const authordata = mongoose.model('authormodel', newSchema);
 module.exports = authordata;
